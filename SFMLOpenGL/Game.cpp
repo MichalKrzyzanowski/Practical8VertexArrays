@@ -127,7 +127,11 @@ void Game::controlCube()
 	{
 		for (int i = 0; i < 8; i++)
 		{
-			m_points[i] = Matrix3::Translate(0, -1) * m_points[i];
+			float temp = m_points[i].Z;
+			m_points[i].Z = 1;
+			m_points[i] = Matrix3::Translate(0, 0.1f) * m_points[i];
+
+			m_points[i].Z = temp;
 		}
 	}
 
@@ -135,7 +139,11 @@ void Game::controlCube()
 	{
 		for (int i = 0; i < 8; i++)
 		{
-			m_points[i] = Matrix3::Translate(0, 1) * m_points[i];
+			float temp = m_points[i].Z;
+			m_points[i].Z = 1;
+			m_points[i] = Matrix3::Translate(0, -0.1f) * m_points[i];
+
+			m_points[i].Z = temp;
 		}
 	}
 
@@ -143,7 +151,11 @@ void Game::controlCube()
 	{
 		for (int i = 0; i < 8; i++)
 		{
-			m_points[i] = Matrix3::Translate(-1, 0) * m_points[i];
+			float temp = m_points[i].Z;
+			m_points[i].Z = 1;
+			m_points[i] = Matrix3::Translate(-0.1f, 0) * m_points[i];
+
+			m_points[i].Z = temp;
 		}
 	}
 
@@ -151,7 +163,11 @@ void Game::controlCube()
 	{
 		for (int i = 0; i < 8; i++)
 		{
-			m_points[i] = Matrix3::Translate(1, 0) * m_points[i];
+			float temp = m_points[i].Z;
+			m_points[i].Z = 1;
+			m_points[i] = Matrix3::Translate(0.1f, 0) * m_points[i];
+
+			m_points[i].Z = temp;
 		}
 	}
 

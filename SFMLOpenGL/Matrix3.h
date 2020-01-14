@@ -46,7 +46,7 @@ public:
 	Vector3 Column(int i) const;
 	Matrix3 Inverse(Matrix3 M1) const;
 	Matrix3 Rotation(int _angle) const;
-	static Matrix3 Translate(int dx, int dy);
+	static Matrix3 Translate(float dx, float dy);
 	static Matrix3 Scale(int dx, int dy);
 
 	Matrix3 operator -() const;
